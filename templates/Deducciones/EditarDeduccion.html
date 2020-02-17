@@ -1,15 +1,17 @@
 <!Doctype html>
 <html>
     <head>
-	   <title> RH | Nueva Percepcion</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../../static/imagenes/rh.ico">
+
+	   <title> RH | Editar Deducciones</title>
 	   <meta charset="utf-8">
 	   <meta name="viewport" content="width=device-width, scale=1.0">
 	   <link rel="stylesheet" href="css/bootstrap.min.css">
-	   <link rel="stylesheet" href="css/style.css">
+	   <link rel="stylesheet" href="../../static/css/estilo.css">
 	</head>
 
 	<header id="MENU">
-			<img src="imagenes/RHH.png" width="70px" height="55px"> 
+			<img src="../../static/imagenes/RHH.png" width="70px" height="55px"> 
 		<ul>
 			<li><a href="Deducciones.html">Deducciones</a>
 				
@@ -35,7 +37,7 @@
 <body >
 		<main>
         <div class="container" style="text-align: center;"><br>
-            <h1> NUEVA PERCEPCION </h1><br>
+            <h1> EDITAR DEDUCCION </h1><br>
             <center>
             <div class="col-sm-4">
                 <form action="NuevaPercepcion" method="post" onsubmit="return validar(this)">
@@ -45,15 +47,15 @@
                     </div>
                     <div class="form-group">
                         <label>NOMBRE:</label>
-                        <input type="text" name="nombre" placeholder="Ingresa el nombre." required class="form-control">
+                        <input type="text" name="nombre" placeholder=" " required class="form-control">
                     </div>
                     <div class="form-group">
                         <label>DESCRIPCION:</label>
-                        <input type="text" name="descripcion" placeholder="Ingresa la descripcion."required class="form-control">
+                        <input type="text" name="descripcion" placeholder=" "required class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>DIAS A PAGAR:</label>
-                        <input type="number" name="diaspagar" placeholder="Ingresa los dias."required class="form-control">
+                        <label>PORCENTAJE:</label>
+                        <input type="number" name="diaspagar" placeholder=" "required class="form-control">
 
                    <!-- {%if msg!=None%}
                         <div id="notificaciones">
@@ -73,7 +75,7 @@
 </body>
 
 	<footer style="margin-bottom: 0"> 
-			<img src="imagenes/fondo4.png" width="60px" height="60px">
+			<img src="../../static/imagenes/fondo4.png" width="60px" height="60px">
 			<address style="text-align: center;"> Departamento RH  </address>
 	</footer>
 </html>
