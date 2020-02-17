@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="../../static/imagenes/rh.ico">
+
+	   <title> RH | Nueva Deduccion</title>
+	   <meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, scale=1.0">
+	   <link rel="stylesheet" href="css/bootstrap.min.css">
+	   <link rel="stylesheet" href="../../static/css/estilo.css">
+	</head>
+
+	<header id="MENU">
+			<img src="../../static/imagenes/RHH.png" width="70px" height="55px"> 
+		<ul>
+			<li><a href="Deducciones.html">Deducciones</a>
+				
+			</li>
+				
+			<li><a href="#">Percepciones</a>
+				
+			</li>
+				
+			<li><a href="Ciudades.html">Ciudades</a>
+				
+			</li>
+				
+			<li><a href="Estados.html">Estado</a>
+				
+			</li>
+				
+		</ul>
+
+	</header>
+
+
+<body >
+		<main>
+        <div class="container" style="text-align: center;"><br>
+            <h1> NUEVA DEDUCCION </h1><br>
+            <center>
+            <div class="col-sm-4">
+                <form action="NuevaPercepcion" method="post" onsubmit="return validar(this)">
+                    <div class="form-group">
+                        <label>ID:</label>
+                        <input type="number" name="id" readonly value="{{id}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>NOMBRE:</label>
+                        <input type="text" name="nombre" placeholder="Ingresa el nombre." required class="form-control">
+                    </div>
+                   
+                   <!-- {%if msg!=None%}
+                        <div id="notificaciones">
+                            <h4 style="color:green;">{{msg}}</h4>
+                        </div>
+                    {%endif%}-->
+                    <br> <br><br>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-primary">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <a href="ConsultaGeneralPercepciones.html" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+            </center>
+        </div>
+</body>
+
+	<footer style="margin-bottom: 0"> 
+			<img src="../../static/imagenes/fondo4.png" width="60px" height="60px">
+			<address style="text-align: center;"> Departamento RH  </address>
+	</footer>
+</html>
