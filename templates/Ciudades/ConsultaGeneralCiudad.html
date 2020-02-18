@@ -4,7 +4,7 @@
 <head>
 	<link rel="shortcut icon" type="image/x-icon" href="../../static/imagenes/rh.ico">
 
-	<title> RH | Deducciones</title>
+	<title> RH | Ciudades</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -39,43 +39,41 @@
 	<main>
 		<br> <br> <br>
 		<div class="container" style="text-align: center;">
-			<h1> CONSULTA DE DEDUCCIONES </h1><bR>
-			<a href="/NuevaDeduccion" class="btn btn-primary"><img src="../../static/imagenes/add.gif">Nuevo</a><br><br>
+			<h1> CONSULTA DE CIUDADES </h1><bR>
+			<a href="/nuevaCiudad" class="btn btn-primary">
+				<img src="../../static/imagenes/add.gif">Nuevo</a>
+			<br><br>
 
-			<form action="/seleccionDeducciones" method="post">
+			<form action="/seleccionCiudades" method="post">
 				<button id="ventasB" type="submit" class="btn btn-primary" role="button">Buscar </button>
 				<input id="codigo" type="number" placeholder="Escribe el codigo" required name="codigoBarras">
 			</form>
 			<br>
-			<button><a class="lista" href="/listarDeducciones" role="button" class="btn btn-primary"> Lista de
-					Deducciones
-				</a> </button>
+			<button><a class="lista" href="/listarCiudades" role="button" class="btn btn-primary"> Lista de Ciudades</a>
+			</button>
 
-			<table id="datos" class="table" style="margin-left: 450px;">
+			<table class="table" style="margin-left: 500px;">
 				<thead>
 					<tr>
 						<th>ID</th>
 						<th>NOMBRE</th>
-						<th>DESCRIPCION</th>
-						<th>PORCENTAJE</th>
+						<th>ID_ESTADO</th>
 						<th>EDITAR</th>
 						<th>ELIMINAR</th>
 					</tr>
 				</thead>
 				<tbody>
-					{% for dedu in deducciones %}
+					{% for ciud in ciudades %}
 					<tr>
-						<td>{{dedu.0}}</td>
-						<td>{{dedu.1}}</td>
-						<td>{{dedu.2}}</td>
-						<td>{{dedu.3}}</td>
+						<td> {{ciud.0}} </td>
+						<td> {{ciud.1}} </td>
+						<td> {{ciud.2}} </td>
 						<td>
-							<a href="/editarDeduccion/{{dedu.0}}"><img src="../../static/imagenes/editar.jpeg"></a>
+							<a href="/editarCiudad/{{ciud.0}}"><img src="../../static/imagenes/editar.jpeg"></a>
 						</td>
 						<td>
-							<a href="/eliminarDeduccion/{{dedu.0}}"><img src="../../static/imagenes/eliminar.jpeg"></a>
+							<a href="/eliminarCiudad/{{ciud.0}}"><img src="../../static/imagenes/eliminar.jpeg"></a>
 						</td>
-						<!--td><a href="ConsultaPercepcion.html"><img src="../../static/imagenes/consultar.jpeg"></a></td-->
 					</tr>
 					{% endfor %}
 			</table>

@@ -17,15 +17,15 @@
 				
 			</li>
 				
-			<li><a href="#">Percepciones</a>
+			<li><a href="/Percepciones">Percepciones</a>
 				
 			</li>
 				
-			<li><a href="Ciudades.html">Ciudades</a>
+			<li><a href="/Ciudades">Ciudades</a>
 				
 			</li>
 				
-			<li><a href="Estados.html">Estado</a>
+			<li><a href="/Estado">Estado</a>
 				
 			</li>
 				
@@ -40,33 +40,61 @@
             <h1> EDITAR DEDUCCION </h1><br>
             <center>
             <div class="col-sm-4">
-                <form action="NuevaPercepcion" method="post" onsubmit="return validar(this)">
-                    <div class="form-group">
-                        <label>ID:</label>
-                        <input type="number" name="id" readonly value="{{id}}" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>NOMBRE:</label>
-                        <input type="text" name="nombre" placeholder=" " required class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>DESCRIPCION:</label>
-                        <input type="text" name="descripcion" placeholder=" "required class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>PORCENTAJE:</label>
-                        <input type="number" name="diaspagar" placeholder=" "required class="form-control">
+                <form action="/actualizarDeduccion/{{deduccion.0}}" method="post">
 
-                   <!-- {%if msg!=None%}
-                        <div id="notificaciones">
-                            <h4 style="color:green;">{{msg}}</h4>
-                        </div>
-                    {%endif%}-->
+                      <table>
+                            <tr>
+                                <td>
+                                    <label>ID:</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="number"  required name="id" value="{{deduccion.0}}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>NOMBRE:</label>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder="Ingresa el nombre." required name="nombre" value="{{deduccion.1}}">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Descripcion:</label>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder="Descripcion" required name="descripcion" value="{{deduccion.2}}">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Porcentaje:</label>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="number" placeholder=" " required name="porcentaje" value="{{deduccion.3}}">
+
+                                </td>
+                            </tr>
+                        </table>
                     <br> <br><br>
                     <div class="form-group">
                         <input type="submit" value="Guardar" class="btn btn-primary">
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <a href="ConsultaGeneralPercepciones.html" class="btn btn-danger">Cancelar</a>
+                        <a href="/CancelarD" class="btn btn-danger">Cancelar</a>
                     </div>
                 </form>
             </div>

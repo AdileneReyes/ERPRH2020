@@ -4,7 +4,7 @@
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="../../static/imagenes/rh.ico">
 
-    <title> RH | Nueva Percepcion</title>
+    <title> RH | editar Ciudad</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -38,23 +38,23 @@
 <body>
     <main>
         <div class="container" style="text-align: center;"><br>
-            <h1> NUEVA PERCEPCION </h1><br>
+            <h1> Editar CIUDAD </h1><br>
             <center>
-
                 <div class="col-sm-4">
-                    <form action="/insertarPercepcion" method="post">
+                    <form action="/actualizarCiudad/{{ciuda.0}}" method="post">
 
                         <table>
-                            <tr>
+
+                            <!--tr>
                                 <td>
                                     <label>ID:</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="number" required name="id">
+                                    <input type="number" required name="id" value="{{ciuda.0}}">
                                 </td>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <td>
                                     <label>NOMBRE:</label>
@@ -62,37 +62,27 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text"  placeholder="Ingresa el nombre." required name="nombre">
+                                    <input type="text" placeholder="" required name="nombre" value="{{ciuda.1}}">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label>DESCRIPCION:</label>
+                                    <label>ID_ESTADO:</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" placeholder="Ingresa la descripcion."  required name="descripcion">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>DIAS A PAGAR:</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="number" placeholder="Ingresa los dias."  required name="diaspagar">
+                                    <input type="number"  required name="idEstado" value="{{ciuda.2}}" >
                                 </td>
                             </tr>
                         </table>
 
+
                         <br> <br><br>
                         <div class="form-group">
                             <input type="submit" value="Guardar" class="btn btn-primary">
-
                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <a href="/CancelarP" class="btn btn-danger">Cancelar</a>
+                            <a href="/CancelarC" class="btn btn-danger">Cancelar</a>
                         </div>
                     </form>
                 </div>

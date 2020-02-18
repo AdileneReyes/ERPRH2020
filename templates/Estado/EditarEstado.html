@@ -1,29 +1,31 @@
 <!Doctype html>
 <html>
     <head>
-	   <title> RH | Editar Estado</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../../static/imagenes/rh.ico">
+
+	   <title> RH | Nuevo Estado</title>
 	   <meta charset="utf-8">
 	   <meta name="viewport" content="width=device-width, scale=1.0">
 	   <link rel="stylesheet" href="css/bootstrap.min.css">
-	   <link rel="stylesheet" href="css/style.css">
+	   <link rel="stylesheet" href="../../static/css/estilo.css">
 	</head>
 
 	<header id="MENU">
-			<img src="imagenes/RHH.png" width="70px" height="55px"> 
+        <img src="../../static/imagenes/RHH.png" width="70px" height="55px"> 
 		<ul>
-			<li><a href="Deducciones.html">Deducciones</a>
+			<li><a href="/Deducciones">Deducciones</a>
 				
 			</li>
 				
-			<li><a href="Percepciones.html">Percepciones</a>
+			<li><a href="/Percepciones">Percepciones</a>
 				
 			</li>
 				
-			<li><a href="Ciudades.html">Ciudades</a>
+			<li><a href="/Ciudades">Ciudades</a>
 				
 			</li>
 				
-			<li><a href="#">Estado</a>
+			<li><a href="/Estado">Estado</a>
 				
 			</li>
 				
@@ -35,32 +37,49 @@
 <body >
 		<main>
         <div class="container" style="text-align: center;"><br>
-            <h1> EDITAR ESTADO </h1><br>
+            <h1> NUEVO ESTADO </h1><br>
             <center>
             <div class="col-sm-4">
-                <form action="NuevoEstado" method="post" onsubmit="return validar(this)">
-                    <div class="form-group">
-                        <label>ID:</label>
-                        <input type="number" name="id" readonly value="{{id}}" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>NOMBRE:</label>
-                        <input type="text" name="nombre" placeholder=" " required class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>SIGLAS:</label>
-                        <input type="text" name="Ingresa las siglas" placeholder=" "required class="form-control">
-                    </div>
-                   <!-- {%if msg!=None%}
-                        <div id="notificaciones">
-                            <h4 style="color:green;">{{msg}}</h4>
-                        </div>
-                    {%endif%}-->
+                <form action="/actualizarEstado/{{estado.0}}" method="post">
+
+                    <table>
+                        <!--tr>
+                            <td>
+                                <label>ID:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="number"  required name="id" value="{{estado.0}}">
+                            </td>
+                        </tr-->
+                        <tr>
+                            <td>
+                                <label>NOMBRE:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" required name="nombre" placeholder="Ingresa el nombre." value="{{estado.1}}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>SIGLAS:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" required name="siglas" placeholder="Ingresa las siglas." value="{{estado.2}}">
+                            </td>
+                        </tr>
+                    </table>
+
                     <br> <br><br>
                     <div class="form-group">
                         <input type="submit" value="Guardar" class="btn btn-primary">
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <a href="ConsultaGeneralEstado.html" class="btn btn-danger">Cancelar</a>
+                        <a href="/CancelarE" class="btn btn-danger">Cancelar</a>
                     </div>
                 </form>
             </div>
@@ -69,7 +88,7 @@
 </body>
 
 	<footer style="margin-bottom: 0"> 
-			<img src="imagenes/fondo4.png" width="60px" height="60px">
-			<address style="text-align: center;"> Departamento RH  </address>
+        <img src="../../static/imagenes/fondo4.png" width="60px" height="60px">
+        <address style="text-align: center;"> Departamento RH  </address>
 	</footer>
 </html>
