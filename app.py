@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, flash
 from flask_sqlalchemy import SQLAlchemy
 import pyodbc
 from Datos.usuarioDAO import UsuarioDAO
@@ -26,8 +26,24 @@ def index():
 
 
 #Direcciona a la pagina principal del sistema
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    try:
+        server = 'localhost'
+        database = 'ERP2020'
+        username = request.form['Usuario']
+        password = request.form['Contraseña']
+        session['usr'] = username
+        session['pass'] = password
+        cnxn = pyodbc.connect(
+            'Driver={ODBC Driver 17 for SQL Server}; SERVER='+server+';DATABASE='+database+';UID='+username+ ';PWD='+password)
+        cursor=cnxn.cursor()
+        cnxn.close()
+    except:
+        flash('Datos incorrectos')
+    return render_template('Comunes/principal.html')
+
+'''
     udao=UsuarioDAO()
     nombreUsuario=request.form['Usuario']
     contra=request.form['Contraseña']
@@ -37,6 +53,7 @@ def login():
         return render_template('Comunes/principal.html', user=session.get('user'))
     else:
         return render_template('Login.html')
+'''
 
 
 
