@@ -14,7 +14,24 @@
 
 <header id="MENU">
     <img src="../../static/imagenes/RHH.png" width="70px" height="55px">
+    <ul>
+        <li><a href="/Deducciones">Deducciones</a>
 
+        </li>
+
+        <li><a href="/Percepciones">Percepciones</a>
+
+        </li>
+
+        <li><a href="/Ciudades">Ciudades</a>
+
+        </li>
+
+        <li><a href="/Estado">Estado</a>
+
+        </li>
+
+    </ul>
 
 </header>
 
@@ -58,7 +75,7 @@
                                     <label>DIAS A PAGAR:</label>
                                 </td>
                                 <td>
-                                    <input type="number" placeholder="Ingresa los dias."  required min="1" name="diaspagar">
+                                    <input type="number" placeholder="Ingresa los dias."  required name="diaspagar">
                                 </td>
                             </tr>
                         </table>
@@ -68,7 +85,7 @@
                             <input type="submit" value="Guardar" class="btn btn-primary">
 
                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <a href="/Percepciones" class="btn btn-danger">Cancelar</a>
+                            <a href="/CancelarP" class="btn btn-danger">Cancelar</a>
                         </div>
                     </form>
                 </div>
@@ -76,6 +93,9 @@
         </div>
 </body>
 
-  {% include 'Comunes/footer.html' %}
+<footer style="margin-bottom: 0">
+    <img src="../../static/imagenes/fondo4.png" width="60px" height="60px">
+    <address style="text-align: center;"> Departamento RH </address>
+</footer>
 
 </html>

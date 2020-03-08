@@ -174,3 +174,10 @@ header ul li:hover ul{
 	100%{margin-left: -2100px;}
 }
 
+<<<<<<< HEAD:ERPRH2020-master/static/css/estilo.css
+=======
+table#datos th,tr,td {
+    border: 2px solid black;
+    text-align: center;
+}
+>>>>>>> 89f7ce5ef98df49b26679279fc1fbada71b63c0c:static/css/estilo.css
