@@ -1,0 +1,223 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="../../static/imagenes/rh.ico">
+
+    <title> RH | Nuevo Empleado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, scale = 1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../static/css/estilo.css">
+</head>
+
+<header id="MENU">
+    <img src="../../static/imagenes/RHH.png" width="70px" height="55px">
+
+    <style>
+        .campos {
+            padding-right:  200px;
+        }
+    </style>
+
+</header>
+
+
+<body>
+    <main>
+        <div class="container" style="text-align: center;"><br>
+            <h1> Nuevo Empleado </h1><br>
+            <center>
+                <div class="col-sm-4">
+                    <form action="/insertarEmpleado" method="post">
+
+                        <table>
+                            <!--tr>
+                                <td>
+                                    <label>ID_EMPLEADO:</label>
+                                </td>
+                                <td>
+                                    <input type="number" required name="idempleado">
+                                </td>
+                            </tr-->
+                            <tr>
+                                <td>
+                                    <label>NOMBRE:</label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="text" placeholder="" required name="nombre">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>APELLIDO PATERNO:</label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="text" required name="apaterno">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>APELLIDO MATERNO:</label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="text" required name="amaterno">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>SEXO: </label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="sexo" value="F" checked>Femenino
+                                    <input type="radio" name="sexo" value="M">Masculino
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>FECHA CONTRATACION: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="date" required name="fechaContratacion">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>FECHA NACIMIENTO: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="date" required name="fechaNacimiento">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>SALARIO: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="number" required name="salario">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>NUMERO SEGURO SOCIAL: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="text" required name="nss">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Estado Civil: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="text" required name="estadoCivil">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>DIAS VACACIONES: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="number" required name="diasVacaciones">
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>DIAS PERMISO: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="number" required name="diasPermiso">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>FOTOGRAFIA: </label>
+                                </td>
+                                <td>
+                                    <input type="file" required name="fotografia">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>DIRECCION: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="text" required name="direccion">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>COLONIA: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="text" required name="colonia">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>CODIGO POSTAL: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="number" required name="codigoPostal">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>ESCOLARIDAD: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="text" required name="escolaridad">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>COMISION: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="number" required name="porcentajeComision">
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>ID DEPARTAMENTO: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="number" required name="idDepa">
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>ID PUESTO: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="number" required name="idPuesto">
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>ID CIUDAD: </label>
+                                </td>
+                                <td>
+                                    <input class="campos" type="number" required name="idCiudad">
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <input type="submit" value="Guardar" class="btn btn-primary">
+                           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <a href="/CancelarEmpleado" class="btn btn-danger">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </center>
+        </div>
+    </main>
+</body>
+
+<footer style="margin-bottom: 0">
+    <img src="../../static/imagenes/fondo4.png" width="60px" height="60px">
+    <address style="text-align: center;"> Departamento RH </address>
+</footer>
+
+</html>

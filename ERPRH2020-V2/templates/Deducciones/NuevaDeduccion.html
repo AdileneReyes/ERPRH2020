@@ -1,0 +1,92 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="../../static/imagenes/rh.ico">
+
+    <title> RH | Nueva Deduccion</title>
+    <meta charset="utf-8">
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/estilo.css">
+</head>
+
+<header id="MENU">
+    <img src="../../static/imagenes/RHH.png" width="70px" height="55px">
+
+</header>
+
+
+<body>
+    <main>
+        <div class="container" style="text-align: center;"><br>
+            <h1> NUEVA DEDUCCION </h1><br>
+            <center>
+
+
+                <div class="col-sm-4">
+                    <form action="/insertarDeduccion" method="POST">
+
+
+                        <table style="margin-left: 120%">
+                            <tr>
+                                <td>
+                                    <label>ID:</label>
+                                </td>
+                                <td>
+                                    <input type="number" name="id" required name="id">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>NOMBRE:</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Ingresa el nombre." required name="nombre">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Descripcion:</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Descripcion" required name="descripcion">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Porcentaje:</label>
+
+                                </td>
+                                <td>
+                                    <input type="number" required min="1" max="100" name="porcentaje">
+
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br>
+                        <br>
+                        <br>
+                        <div class="form-group" style="margin-left: 140%">
+                            <input type="submit" value="Guardar" class="btn btn-primary">
+
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <a href="/Deducciones" class="btn btn-danger">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+
+            </center>
+        </div>
+    </main>
+</body>
+
+  {% include 'Comunes/footer.html' %}
+
+</html>
